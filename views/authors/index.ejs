@@ -7,6 +7,13 @@
 <br>
 
 <% authors.forEach(author => { %>
+
 	<dir> <%= author.name %> </dir>
+	<a href="/authors/<%= author.id %>"> View </a>
+	<a href="/authors/<%= author.id %>/edit"> Edit </a>
+	<form action="/authors/<%= author.id %>?_method=DELETE" method="POST">
+		<button type="submit"> Delete </button>
+	</form>
+
 <% }) %> 
 
